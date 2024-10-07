@@ -50,8 +50,8 @@
         </a>
         <!-- Subitens do Calendário -->
         <ul id="collapseCalendario" class="collapse nav-subitems">
-            <li><a class="collapse-item" href="#">Subitem 1</a></li>
-            <li><a class="collapse-item" href="#">Subitem 2</a></li>
+            <li><a class="collapse-item" href="#">Subitem </a></li>
+            <li><a class="collapse-item" href="#">Subitem </a></li>
         </ul>
     </li>
 
