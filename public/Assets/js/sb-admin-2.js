@@ -10,6 +10,22 @@
     };
   });
 
+  // Hover to expand the sidebar
+  $('.sidebar').hover(
+    function() {
+      if ($("body").hasClass("sidebar-toggled")) {
+        $(this).addClass("hovered"); // Adiciona uma classe no hover
+        $(this).removeClass("toggled"); // Remove o colapso ao passar o mouse
+      }
+    },
+    function() {
+      if ($("body").hasClass("sidebar-toggled")) {
+        $(this).removeClass("hovered"); // Remove a classe no mouseout
+        $(this).addClass("toggled"); // Recolapsa quando o mouse sai
+      }
+    }
+  );
+
   // Close any open menu accordions when window is resized below 768px
   $(window).resize(function() {
     if ($(window).width() < 768) {

@@ -10318,420 +10318,176 @@ a:focus {
 .topbar.navbar-light .navbar-nav .nav-item .nav-link:active {
   color: #858796;
 }
-
+/* Sidebar ajustada para ser fixa e sobrepor o conteúdo */
 .sidebar {
-  width: 6.5rem;
-  min-height: 100vh;
+  position: fixed; /* A sidebar ficará fixa na tela, mesmo ao rolar a página */
+  top: 0; /* Alinha a sidebar no topo da página */
+  left: 0; /* Alinha a sidebar à esquerda da página */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar a sidebar */
+  width: 4.7rem; /* Largura inicial da sidebar */
+  min-height: 100vh; /* A altura mínima da sidebar ocupará a altura total da tela */
+  transition: width 0.7s ease, background 0.7s ease; /* Transição suave para mudança de largura e fundo */
+  overflow: hidden; /* Esconde o conteúdo que transborda além da largura da sidebar */
+  background: linear-gradient(to right, #131518 80%, rgba(19, 21, 24, 0)); /* Fundo com gradiente que vai do sólido à transparência para efeito de fade */
+  z-index: 999; /* Prioridade de sobreposição, garantindo que a sidebar fique acima do conteúdo */
+  display: flex; /* Usado para controlar o layout de seus elementos filhos */
+  flex-direction: column; /* Alinha os elementos filhos em uma coluna vertical */
+  padding-top: 4rem; /* Espaçamento no topo para afastar o conteúdo do início da barra */
 }
 
+/* Expandir a barra lateral ao passar o mouse */
+.sidebar:hover {
+  width: 15rem; /* Aumenta a largura da sidebar quando o mouse passa sobre ela */
+  transition: width 0.5s ease, background 0.5s ease; /* Transição suave ao expandir a largura e o fundo */
+  background: linear-gradient(to right, #131518 100%, rgba(19, 21, 24, 0)); /* Ajusta o gradiente na expansão da sidebar */
+}
+
+/* Estilo da marca da barra lateral (logo e nome da empresa) */
+.sidebar-brand {
+  position: fixed; /* Fixa a marca da empresa na sidebar, mesmo quando ela se move */
+  top: 0; /* Alinha a marca no topo da sidebar */
+  left: 0; /* Alinha a marca à esquerda */
+  align-items: center; /* Centraliza horizontalmente os itens filhos */
+  z-index: 1000; /* Prioridade de sobreposição para garantir que a marca fique acima de outros elementos */
+  padding-left: 1rem; /* Espaçamento à esquerda da marca */
+}
+
+.sidebar-brand i {
+  display: flex; /* Exibe o ícone como um item flexível */
+  font-size: 2rem; /* Define o tamanho do ícone */
+  min-width: 4.7rem; /* Largura mínima para o ícone, alinhando-o com a largura inicial da sidebar */
+  text-align: center; /* Centraliza o ícone horizontalmente */
+  line-height: 4rem; /* Alinha o ícone verticalmente */
+  padding: 0; /* Remove espaçamento extra */
+  margin: 0; /* Remove margens extras */
+}
+
+.sidebar-brand .sidebar-brand-text {
+  font-size: 24px; /* Define o tamanho do texto */
+  font-weight: bold; /* Define o texto em negrito */
+  color: #ffffff; /* Define a cor do texto para branco */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  opacity: 0; /* Texto oculto inicialmente */
+  margin-left: 1rem; /* Espaçamento à esquerda do texto */
+  transition: opacity 0.3s ease; /* Transição suave para exibição do texto */
+}
+
+/* Exibe o texto da marca quando a barra lateral está expandida */
+.sidebar:hover .sidebar-brand .sidebar-brand-text {
+  opacity: 1; /* Exibe o texto */
+  margin-left: 1rem; /* Mantém o espaçamento à esquerda */
+}
+
+/* Estilo para os itens de navegação principais */
 .sidebar .nav-item {
-  position: relative;
+  width: 100%; /* Define a largura total do item */
+  display: flex; /* Exibe o item como flexível */
+  flex-direction: column; /* Organiza os subitens em uma coluna */
+  justify-content: flex-start; /* Alinha os subitens ao início */
+  align-items: flex-start; /* Alinha o conteúdo ao início da linha */
+  padding: 0; /* Remove qualquer espaçamento extra */
+  position: relative; /* Permite o posicionamento relativo de subelementos */
 }
 
-.sidebar .nav-item:last-child {
-  margin-bottom: 1rem;
+/* Estilo dos links de navegação */
+.sidebar .nav-link {
+  display: flex; /* Exibe o link como flexível */
+  align-items: center; /* Alinha o conteúdo verticalmente no centro */
+  width: 100%; /* Ocupa a largura total disponível */
+  padding: 0; /* Remove espaçamentos extras */
+  height: 4rem; /* Define uma altura fixa para o link */
+  position: relative; /* Permite o posicionamento relativo de subelementos */
+  color: #ffffff; /* Cor branca para o texto */
+  text-decoration: none; /* Remove sublinhados de links */
 }
 
-.sidebar .nav-item .nav-link {
-  text-align: center;
-  padding: 0.75rem 1rem;
-  width: 6.5rem;
+/* Estilo dos ícones nos links de navegação */
+.sidebar .nav-link i {
+  font-size: 1.2rem; /* Define o tamanho do ícone */
+  margin-right: -1rem; /* Margem negativa para ajustar o ícone */
+  min-width: 4.7rem; /* Largura mínima do ícone, alinhada à largura inicial da sidebar */
+  text-align: center; /* Centraliza o ícone horizontalmente */
+  line-height: 3rem; /* Alinha o ícone verticalmente */
 }
 
-.sidebar .nav-item .nav-link span {
-  font-size: 0.65rem;
-  display: block;
+/* Texto dos links de navegação */
+.sidebar .nav-link span {
+  font-size: 16px; /* Define o tamanho do texto */
+  opacity: 0; /* Texto oculto inicialmente */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  line-height: 3rem; /* Alinha o texto verticalmente */
+  transition: opacity 0.8s ease; /* Transição suave para exibição do texto */
 }
 
-.sidebar .nav-item.active .nav-link {
-  font-weight: 700;
+/* Exibe o texto dos links ao expandir a barra lateral */
+.sidebar:hover .nav-link span {
+  display: inline-block; /* Exibe o texto em linha */
+  opacity: 1; /* Exibe o texto */
 }
 
-.sidebar .nav-item .collapse {
-  position: absolute;
-  left: calc(6.5rem + 1.5rem / 2);
-  z-index: 1;
-  top: 2px;
+/* Estilo para a rotação da seta */
+.rotate-icon {
+  transition: transform 0.3s ease, opacity 0.8s ease; /* Transição suave para rotação e opacidade */
+  position: absolute; /* Permite o posicionamento absoluto da seta */
+  right: 0.8rem; /* Alinha a seta à direita */
+  top: 50%; /* Alinha a seta verticalmente no meio */
+  transform: translateY(-50%); /* Centraliza a seta verticalmente */
+  transform-origin: center; /* Define o ponto de origem para rotação da seta */
+  display: inline-block; /* Exibe a seta como um item em linha */
+  width: 1.5rem; /* Define a largura da seta */
+  text-align: right; /* Alinha o ícone da seta à direita */
+  opacity: 0; /* Oculta a seta inicialmente */
 }
 
-.sidebar .nav-item .collapse .collapse-inner {
-  border-radius: 0.35rem;
-  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+/* Exibe a seta ao expandir a sidebar */
+.sidebar:hover .rotate-icon {
+  opacity: 1; /* Exibe a seta */
+  transition-delay: 0.3; /* Pequeno atraso para a seta aparecer */
 }
 
-.sidebar .nav-item .collapsing {
-  display: none;
-  transition: none;
+/* Seta quando o item de navegação está colapsado */
+.nav-link.collapsed .rotate-icon {
+  transform: translateY(-50%) rotate(270deg); /* Rotaciona a seta para a esquerda */
 }
 
-.sidebar .nav-item .collapse .collapse-inner,
-.sidebar .nav-item .collapsing .collapse-inner {
-  padding: .5rem 0;
-  min-width: 10rem;
-  font-size: 0.85rem;
-  margin: 0 0 1rem 0;
+/* Seta quando o item de navegação está expandido */
+.nav-link[aria-expanded="true"] .rotate-icon {
+  transform: translateY(-50%) rotate(360deg); /* Rotaciona a seta para baixo */
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-header,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-header {
-  margin: 0;
-  white-space: nowrap;
-  padding: .5rem 1.5rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 0.65rem;
-  color: #b7b9cc;
+/* Estilo para os submenus (alinhados abaixo do item) */
+.nav-subitems {
+  list-style: none; /* Remove o estilo de lista */
+  padding-left: 0rem; /* Remove o espaçamento da lista */
+  margin-left: 0rem; /* Remove a margem da lista */
+  background-color: #131518; /* Define a cor de fundo dos subitens */
+  margin-top: 0; /* Remove a margem superior */
+  display: none; /* Oculta os subitens inicialmente */
+  width: 100%; /* Ocupa a largura total do item de navegação */
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-item {
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  display: block;
-  color: #3a3b45;
-  text-decoration: none;
-  border-radius: 0.35rem;
-  white-space: nowrap;
+/* Exibe os subitens quando o item está expandido */
+.nav-subitems.collapse.show {
+  display: block; /* Exibe os subitens */
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #eaecf4;
+/* Estilo para cada subitem */
+.nav-subitems li {
+  padding: 0.5rem 0 0.5rem 2rem; /* Define o espaçamento interno dos subitens */
+  width: 100%; /* Ocupa a largura total disponível */
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-item:active {
-  background-color: #dddfeb;
+/* Estilo dos links dos subitens */
+.nav-subitems .collapse-item {
+  color: #ffffff; /* Define a cor do texto dos subitens */
+  text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-item.active {
-  color: #4e73df;
-  font-weight: 700;
+/* Estilo ao passar o mouse sobre os subitens */
+.nav-subitems .collapse-item:hover {
+  color: #ddd; /* Altera a cor ao passar o mouse sobre os subitens */
 }
 
-.sidebar #sidebarToggle {
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.sidebar #sidebarToggle::after {
-  font-weight: 900;
-  content: '\f104';
-  font-family: 'Font Awesome 5 Free';
-  margin-right: 0.1rem;
-}
-
-.sidebar #sidebarToggle:hover {
-  text-decoration: none;
-}
-
-.sidebar #sidebarToggle:focus {
-  outline: none;
-}
-
-.sidebar.toggled {
-  width: 0 !important;
-  overflow: hidden;
-}
-
-.sidebar.toggled #sidebarToggle::after {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
-  margin-left: 0.25rem;
-}
-
-.sidebar.toggled .sidebar-card {
-  display: none;
-}
-
-.sidebar .sidebar-brand {
-  height: 4.375rem;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 800;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  z-index: 1;
-}
-
-.sidebar .sidebar-brand .sidebar-brand-icon i {
-  font-size: 2rem;
-}
-
-.sidebar .sidebar-brand .sidebar-brand-text {
-  display: none;
-}
-
-.sidebar hr.sidebar-divider {
-  margin: 0 1rem 1rem;
-}
-
-.sidebar .sidebar-heading {
-  text-align: center;
-  padding: 0 1rem;
-  font-weight: 800;
-  font-size: 0.65rem;
-}
-
-.sidebar .sidebar-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.875rem;
-  border-radius: 0.35rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.sidebar .sidebar-card .sidebar-card-illustration {
-  height: 3rem;
-  display: block;
-}
-
-.sidebar .sidebar-card .sidebar-card-title {
-  font-weight: bold;
-}
-
-.sidebar .sidebar-card p {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-@media (min-width: 768px) {
-  .sidebar {
-    width: 14rem !important;
-  }
-  .sidebar .nav-item .collapse {
-    position: relative;
-    left: 0;
-    z-index: 1;
-    top: 0;
-    -webkit-animation: none;
-    animation: none;
-  }
-  .sidebar .nav-item .collapse .collapse-inner {
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .sidebar .nav-item .collapsing {
-    display: block;
-    transition: height 0.15s ease;
-  }
-  .sidebar .nav-item .collapse,
-  .sidebar .nav-item .collapsing {
-    margin: 0 1rem;
-  }
-  .sidebar .nav-item .nav-link {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    width: 14rem;
-  }
-  .sidebar .nav-item .nav-link i {
-    font-size: 0.85rem;
-    margin-right: 0.25rem;
-  }
-  .sidebar .nav-item .nav-link span {
-    font-size: 0.85rem;
-    display: inline;
-  }
-  .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {
-    width: 1rem;
-    text-align: center;
-    float: right;
-    vertical-align: 0;
-    border: 0;
-    font-weight: 900;
-    content: '\f107';
-    font-family: 'Font Awesome 5 Free';
-  }
-  .sidebar .nav-item .nav-link[data-toggle="collapse"].collapsed::after {
-    content: '\f105';
-  }
-  .sidebar .sidebar-brand .sidebar-brand-icon i {
-    font-size: 2rem;
-  }
-  .sidebar .sidebar-brand .sidebar-brand-text {
-    display: inline;
-  }
-  .sidebar .sidebar-heading {
-    text-align: left;
-  }
-  .sidebar.toggled {
-    overflow: visible;
-    width: 6.5rem !important;
-  }
-  .sidebar.toggled .nav-item .collapse {
-    position: absolute;
-    left: calc(6.5rem + 1.5rem / 2);
-    z-index: 1;
-    top: 2px;
-    -webkit-animation-name: growIn;
-    animation-name: growIn;
-    -webkit-animation-duration: 200ms;
-    animation-duration: 200ms;
-    -webkit-animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
-    animation-timing-function: transform cubic-bezier(0.18, 1.25, 0.4, 1), opacity cubic-bezier(0, 1, 0.4, 1);
-  }
-  .sidebar.toggled .nav-item .collapse .collapse-inner {
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-    border-radius: 0.35rem;
-  }
-  .sidebar.toggled .nav-item .collapsing {
-    display: none;
-    transition: none;
-  }
-  .sidebar.toggled .nav-item .collapse,
-  .sidebar.toggled .nav-item .collapsing {
-    margin: 0;
-  }
-  .sidebar.toggled .nav-item:last-child {
-    margin-bottom: 1rem;
-  }
-  .sidebar.toggled .nav-item .nav-link {
-    text-align: center;
-    padding: 0.75rem 1rem;
-    width: 6.5rem;
-  }
-  .sidebar.toggled .nav-item .nav-link span {
-    font-size: 0.65rem;
-    display: block;
-  }
-  .sidebar.toggled .nav-item .nav-link i {
-    margin-right: 0;
-  }
-  .sidebar.toggled .nav-item .nav-link[data-toggle="collapse"]::after {
-    display: none;
-  }
-  .sidebar.toggled .sidebar-brand .sidebar-brand-icon i {
-    font-size: 2rem;
-  }
-  .sidebar.toggled .sidebar-brand .sidebar-brand-text {
-    display: none;
-  }
-  .sidebar.toggled .sidebar-heading {
-    text-align: center;
-  }
-}
-
-.sidebar-light .sidebar-brand {
-  color: #6e707e;
-}
-
-.sidebar-light hr.sidebar-divider {
-  border-top: 1px solid #eaecf4;
-}
-
-.sidebar-light .sidebar-heading {
-  color: #b7b9cc;
-}
-
-.sidebar-light .nav-item .nav-link {
-  color: #858796;
-}
-
-.sidebar-light .nav-item .nav-link i {
-  color: #d1d3e2;
-}
-
-.sidebar-light .nav-item .nav-link:active, .sidebar-light .nav-item .nav-link:focus, .sidebar-light .nav-item .nav-link:hover {
-  color: #6e707e;
-}
-
-.sidebar-light .nav-item .nav-link:active i, .sidebar-light .nav-item .nav-link:focus i, .sidebar-light .nav-item .nav-link:hover i {
-  color: #6e707e;
-}
-
-.sidebar-light .nav-item .nav-link[data-toggle="collapse"]::after {
-  color: #b7b9cc;
-}
-
-.sidebar-light .nav-item.active .nav-link {
-  color: #6e707e;
-}
-
-.sidebar-light .nav-item.active .nav-link i {
-  color: #6e707e;
-}
-
-.sidebar-light #sidebarToggle {
-  background-color: #eaecf4;
-}
-
-.sidebar-light #sidebarToggle::after {
-  color: #b7b9cc;
-}
-
-.sidebar-light #sidebarToggle:hover {
-  background-color: #dddfeb;
-}
-
-.sidebar-dark .sidebar-brand {
-  color: #fff;
-}
-
-.sidebar-dark hr.sidebar-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.sidebar-dark .sidebar-heading {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.sidebar-dark .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.sidebar-dark .nav-item .nav-link i {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {
-  color: #fff;
-}
-
-.sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover i {
-  color: #fff;
-}
-
-.sidebar-dark .nav-item .nav-link[data-toggle="collapse"]::after {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.sidebar-dark .nav-item.active .nav-link {
-  color: #fff;
-}
-
-.sidebar-dark .nav-item.active .nav-link i {
-  color: #fff;
-}
-
-.sidebar-dark #sidebarToggle {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar-dark #sidebarToggle::after {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.sidebar-dark #sidebarToggle:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-.sidebar-dark.toggled #sidebarToggle::after {
-  color: rgba(255, 255, 255, 0.5);
-}
 
 .btn-circle {
   border-radius: 100%;

@@ -16,10 +16,10 @@ use App\Http\Controllers\MenuController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/index', function () {
     return view('index');
+});
+Route::get('/teste', function () {
+    return view('teste');
 });
 
 Route::prefix('cardapio')->name('menu.')->group(function () {
