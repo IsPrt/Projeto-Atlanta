@@ -1,0 +1,83 @@
+.sidebar {
+    height: 100%; /* Define a altura para ocupar 100% da tela */
+    width: 250px; /* Define a largura fixa da barra lateral */
+    position: fixed; /* Posiciona a barra lateral de forma fixa */
+    top: 0; /* Posiciona a barra no topo da página */
+    left: 0; /* Posiciona a barra no lado esquerdo */
+    background-color: #808080; /* Define a cor de fundo escura */
+    padding-top: 20px; /* Adiciona espaçamento no topo */
+    transition: 0.3s ease; /* Transição suave para mudanças */
+    z-index: 1; /* Garantia que a barra fique acima de outros elementos */
+}
+
+.sidebar a {
+    padding: 15px 20px; /* Preenchimento interno dos links */
+    text-decoration: none; /* Remove a sublinha padrão */
+    font-size: 18px; /* Define o tamanho da fonte */
+    color: #f1f1f1; /* Define a cor do texto dos links */
+    display: block; /* Faz o link ocupar o espaço total disponível */
+    transition: 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.sidebar a:hover {
+    background-color: #575757; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+.sidebar .close-btn {
+    position: absolute; /* Posiciona o botão de fechar de forma absoluta */
+    top: 10px; /* Posição em relação ao topo da barra */
+    right: 20px; /* Posição em relação ao lado direito da barra */
+    font-size: 24px; /* Tamanho da fonte do botão de fechar */
+}
+
+.open-btn {
+    font-size: 20px; /* Tamanho da fonte do botão de abrir */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 15px; /* Preenchimento interno do botão */
+    border: none; /* Remove borda do botão */
+    position: fixed; /* Posiciona o botão de abrir de forma fixa */
+    top: 20px; /* Posição do botão de abrir em relação ao topo */
+    left: 20px; /* Posição do botão de abrir em relação à esquerda */
+    transition: 0.3s ease; /* Transição suave ao interagir com o botão */
+}
+
+.open-btn:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse no botão de abrir */
+}
+
+/* Efeito para esconder a barra lateral */
+.sidebar.collapsed {
+    width: 0; /* Define largura zero quando a barra está escondida */
+    overflow: hidden; /* Oculta o conteúdo quando a largura é zero */
+}
+/* Adiciona mais especificidade para a barra lateral */
+.navbar-nav.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+
+/* Força o estilo com !important */
+.navbar-nav.sidebar a {
+    color: #f1f1f1 !important;
+}
+
+
+/* Responsivo para telas menores */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px; /* Reduz o espaçamento superior */
+    }
+    .sidebar a {
+        font-size: 16px; /* Reduz o tamanho da fonte dos links */
+    }
+}

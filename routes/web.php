@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/teste', function () {
-    return view('teste');
+    return view('index1');
 });
 
 Route::prefix('cardapio')->name('menu.')->group(function () {
@@ -29,11 +29,6 @@ Route::prefix('cardapio')->name('menu.')->group(function () {
     Route::get('/editar/{id}', [MenuController::class, 'edit'])->name('edit');
     Route::put('/editar/{id}', [MenuController::class, 'update'])->name('update');
     Route::get('/excluir/{id}', [MenuController::class, 'destroy'])->name('destroy');
-});
-
-
-Route::get('/teste', function() {
-    return view('teste');
 });
 
 Route::get('/dashboard', function () {
