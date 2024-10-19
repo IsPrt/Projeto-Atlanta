@@ -18,9 +18,9 @@
     <link href="{{ asset('assets/css/sb-admin-2.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Estilos personalizados para este template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -30,7 +30,7 @@
     <div id="wrapper">
 
 <!-- Barra Lateral -->
-<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #131518;">
+<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #101217;">
     <!-- Marca da Barra Lateral -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="font-size: 24px;color: #ffffff;">
         <img src={{ asset('Assets/img/atlanta.png') }} width="45" height="45">
@@ -44,7 +44,7 @@
     <!-- Item de Navegação - Calendário -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" aria-expanded="false" data-target="#collapseCalendario" aria-controls="collapseCalendario">
-            <i class="fas fa-calendar"></i>
+            <i class="bi bi-columns-gap"></i>
             <span>Calendário</span>
             <i class="rotate-icon fas fa-chevron-down"></i> <!-- Ícone de seta -->
         </a>
@@ -58,7 +58,7 @@
     <!-- Item de Navegação - Gestão Financeira -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" aria-expanded="false" data-target="#collapseFinanceiro" aria-controls="collapseFinanceiro">
-            <i class="fas fa-wrench"></i>
+            <i class="bi bi-currency-dollar"></i>
             <span>Gestão Financeira</span>
             <i class="rotate-icon fas fa-chevron-down"></i> <!-- Ícone de seta -->
         </a>
@@ -72,7 +72,7 @@
     <!-- Item de Navegação - Parcerias -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" aria-expanded="false" data-target="#collapseParcerias" aria-controls="collapseParcerias">
-            <i class="fas fa-folder"></i>
+            <i class="bi bi-tornado"></i>
             <span>Parcerias</span>
             <i class="rotate-icon fas fa-chevron-down"></i> <!-- Ícone de seta -->
         </a>
@@ -86,7 +86,7 @@
     <!-- Item de Navegação - Mídia -->
     <li class="nav-item">
         <a class="nav-link" href="#" style="color: #ffffff;">
-            <i class="fas fa-chart-area"></i>
+            <i class="bi bi-play-fill"></i>
             <span>Mídia</span>
         </a>
     </li>
@@ -94,7 +94,7 @@
     <!-- Item de Navegação - Teste -->
     <li class="nav-item">
         <a class="nav-link" href="#" style="color: #ffffff;">
-            <i class="fas fa-table"></i>
+            <i class="bi bi-code-slash"></i>
             <span>Teste</span>
         </a>
     </li>
@@ -111,7 +111,7 @@
     </div>
 
         <!-- Envoltório do Conteúdo -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column" style="margin-left: 4.7rem;">
 
             <!-- Conteúdo Principal -->
             <div id="content">

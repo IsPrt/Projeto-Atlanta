@@ -10323,12 +10323,10 @@ a:focus {
   position: fixed; /* A sidebar ficará fixa na tela, mesmo ao rolar a página */
   top: 0; /* Alinha a sidebar no topo da página */
   left: 0; /* Alinha a sidebar à esquerda da página */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar a sidebar */
   width: 4.7rem; /* Largura inicial da sidebar */
   min-height: 100vh; /* A altura mínima da sidebar ocupará a altura total da tela */
   transition: width 0.7s ease, background 0.7s ease; /* Transição suave para mudança de largura e fundo */
   overflow: hidden; /* Esconde o conteúdo que transborda além da largura da sidebar */
-  background: linear-gradient(to right, #131518 80%, rgba(19, 21, 24, 0)); /* Fundo com gradiente que vai do sólido à transparência para efeito de fade */
   z-index: 999; /* Prioridade de sobreposição, garantindo que a sidebar fique acima do conteúdo */
   display: flex; /* Usado para controlar o layout de seus elementos filhos */
   flex-direction: column; /* Alinha os elementos filhos em uma coluna vertical */
@@ -10339,7 +10337,6 @@ a:focus {
 .sidebar:hover {
   width: 15rem; /* Aumenta a largura da sidebar quando o mouse passa sobre ela */
   transition: width 0.5s ease, background 0.5s ease; /* Transição suave ao expandir a largura e o fundo */
-  background: linear-gradient(to right, #131518 100%, rgba(19, 21, 24, 0)); /* Ajusta o gradiente na expansão da sidebar */
 }
 
 /* Estilo da marca da barra lateral (logo e nome da empresa) */
@@ -10427,8 +10424,10 @@ a:focus {
 
 /* Estilo para a rotação da seta */
 .rotate-icon {
-  transition: transform 0.3s ease, opacity 0.8s ease; /* Transição suave para rotação e opacidade */
   position: absolute; /* Permite o posicionamento absoluto da seta */
+  transition: transform 0.3s ease 0.2s; /* Adiciona um atraso na transição */
+  transform: rotate(90deg); /* A seta começa rotacionada em 90 graus */
+  margin-left: -20px; /* Move a seta 20px para a esquerda, fora da visão */
   right: 0.8rem; /* Alinha a seta à direita */
   top: 50%; /* Alinha a seta verticalmente no meio */
   transform: translateY(-50%); /* Centraliza a seta verticalmente */
@@ -10442,7 +10441,7 @@ a:focus {
 /* Exibe a seta ao expandir a sidebar */
 .sidebar:hover .rotate-icon {
   opacity: 1; /* Exibe a seta */
-  transition-delay: 0.3; /* Pequeno atraso para a seta aparecer */
+  transform: rotate(0deg); /* A seta começa rotacionada em 90 graus */
 }
 
 /* Seta quando o item de navegação está colapsado */
@@ -10460,7 +10459,6 @@ a:focus {
   list-style: none; /* Remove o estilo de lista */
   padding-left: 0rem; /* Remove o espaçamento da lista */
   margin-left: 0rem; /* Remove a margem da lista */
-  background-color: #131518; /* Define a cor de fundo dos subitens */
   margin-top: 0; /* Remove a margem superior */
   display: none; /* Oculta os subitens inicialmente */
   width: 100%; /* Ocupa a largura total do item de navegação */
