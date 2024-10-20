@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Estilos personalizados para este template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -34,7 +37,9 @@
     <!-- Marca da Barra Lateral -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#" style="font-size: 24px;color: #ffffff;">
         <img src={{ asset('Assets/img/atlanta.png') }} width="45" height="45">
-        <div class="sidebar-brand-text">Atlanta®</div>
+        <div class="sidebar-brand-text">
+            <span style="font-family: 'Raleway', cursive;">Atlanta ®</span>
+        </div>
     </a>
 
     <!-- Divisor -->

@@ -10336,7 +10336,7 @@ a:focus {
 /* Expandir a barra lateral ao passar o mouse */
 .sidebar:hover {
   width: 15rem; /* Aumenta a largura da sidebar quando o mouse passa sobre ela */
-  transition: width 0.5s ease, background 0.5s ease; /* Transição suave ao expandir a largura e o fundo */
+  transition: width 0.8s ease, background 0.5s ease; /* Transição suave ao expandir a largura e o fundo */
 }
 
 /* Estilo da marca da barra lateral (logo e nome da empresa) */
@@ -10424,10 +10424,8 @@ a:focus {
 
 /* Estilo para a rotação da seta */
 .rotate-icon {
+  transition: transform 0.3s ease, opacity 0.8s ease; /* Transição suave para rotação e opacidade */
   position: absolute; /* Permite o posicionamento absoluto da seta */
-  transition: transform 0.3s ease 0.2s; /* Adiciona um atraso na transição */
-  transform: rotate(90deg); /* A seta começa rotacionada em 90 graus */
-  margin-left: -20px; /* Move a seta 20px para a esquerda, fora da visão */
   right: 0.8rem; /* Alinha a seta à direita */
   top: 50%; /* Alinha a seta verticalmente no meio */
   transform: translateY(-50%); /* Centraliza a seta verticalmente */
@@ -10441,7 +10439,7 @@ a:focus {
 /* Exibe a seta ao expandir a sidebar */
 .sidebar:hover .rotate-icon {
   opacity: 1; /* Exibe a seta */
-  transform: rotate(0deg); /* A seta começa rotacionada em 90 graus */
+  transition-delay: 0.8; /* Pequeno atraso para a seta aparecer */
 }
 
 /* Seta quando o item de navegação está colapsado */
