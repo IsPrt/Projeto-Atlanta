@@ -18,6 +18,9 @@ use App\Http\Controllers\MenuController;
 Route::get('/', function () {
     return view('Atlanta_index');
 });
+Route::get('/teste', function () {
+    return view('teste');
+});
 
 Route::prefix('cardapio')->name('menu.')->group(function () {
     Route::get('/', [MenuController::class, 'index'])->name('index');

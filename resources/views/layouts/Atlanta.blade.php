@@ -14,7 +14,8 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
-		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
+@yield('title')
+		<title>Atlanta Souls</title>
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,37 +26,37 @@ License: For each use you must have a valid license purchased only from above li
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href={{ asset ("atlanta/Atl.ico") }} />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Page Vendor Stylesheets(used by this page)-->
-		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href={{ asset ("assets/plugins/custom/fullcalendar/fullcalendar.bundle.css") }} rel="stylesheet" type="text/css" />
 		<!--end::Page Vendor Stylesheets-->
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href={{ asset ("assets/plugins/global/plugins.bundle.css") }} rel="stylesheet" type="text/css" />
+		<link href={{ asset ("assets/css/style.bundle.css") }} rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px" data-kt-aside-minimize="on">
 		<!--begin::Main-->
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page-->
 			<div class="page d-flex flex-row flex-column-fluid">
 				<!--begin::Aside-->
-				<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+				<div id="kt_aside" style="background-image: linear-gradient(#10091f, #101217);" class="aside aside-dark aside-hoverable aside-minimize" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">					
 					<!--begin::Brand-->
-					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+					<div class="aside-logo flex-column-auto" id="kt_aside_logo" style="background-color: #10091f">
 						<!--begin::Logo-->
+@yield('textlogo')
 						<a href="../../demo13/dist/index.html">
-							<img alt="Logo" src="assets/media/logos/logo-demo13.svg" class="h-15px logo" />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside toggler-->
-						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle active" data-kt-toggle="false" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
 							<!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
 							<span class="svg-icon svg-icon-1 rotate-180">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -81,25 +82,25 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="menu-item">
 									<a class="menu-link active" href="../../demo13/dist/index.html">
 										<span class="menu-icon">
-											<i class="bi bi-grid fs-3"></i>
+											<i class="bi bi-columns-gap fs-3"></i>
 										</span>
-										<span class="menu-title">Default</span>
+										<span class="menu-title">Inicio Atlanta</span>
 									</a>
 								</div>
 								<div class="menu-item">
 									<a class="menu-link" href="../../demo13/dist/dashboards/only-header.html">
 										<span class="menu-icon">
-											<i class="bi bi-window fs-3"></i>
+											<i class="bi bi-calendar2-week fs-3"></i>
 										</span>
-										<span class="menu-title">Only Header</span>
+										<span class="menu-title">Teste 1</span>
 									</a>
 								</div>
 								<div class="menu-item">
 									<a class="menu-link" href="../../demo13/dist/landing.html">
 										<span class="menu-icon">
-											<i class="bi bi-app-indicator fs-3"></i>
+											<i class="bi bi-tornado fs-3"></i>
 										</span>
-										<span class="menu-title">Landing Page</span>
+										<span class="menu-title">Teste 2</span>
 									</a>
 								</div>
 								<div class="menu-item">
@@ -110,413 +111,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 									<span class="menu-link">
 										<span class="menu-icon">
-											<i class="bi bi-archive fs-3"></i>
-										</span>
-										<span class="menu-title">Pages</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Profile</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/overview.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Overview</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/projects.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Projects</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/campaigns.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Campaigns</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/documents.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Documents</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/connections.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Connections</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/profile/activity.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Activity</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Projects</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">My Projects</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/project.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">View Project</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/targets.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Targets</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/budget.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Budget</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/users.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Users</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/files.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Files</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/activity.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Activity</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/projects/settings.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Settings</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Wizards</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/wizards/horizontal.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Horizontal</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/wizards/vertical.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Vertical</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Search</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/search/horizontal.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Horizontal</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/search/vertical.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Vertical</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Blog</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/blog/home.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Blog Home</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/blog/post.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Blog Post</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Company</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/about.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">About Us</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/pricing.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Pricing</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/contact.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Contact Us</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/team.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Our Team</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/licenses.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Licenses</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/company/sitemap.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Sitemap</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Careers</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/careers/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Careers List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/careers/apply.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Careers Apply</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">FAQ</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/faq/classic.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Classic</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/pages/faq/extended.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Extended</span>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-person fs-2"></i>
-										</span>
-										<span class="menu-title">Account</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/overview.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Overview</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/settings.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Settings</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/security.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Security</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/billing.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Billing</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/statements.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Statements</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/referrals.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Referrals</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/account/api-keys.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">API Keys</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-sticky fs-3"></i>
+											<i class="bi bi-suit-spade fs-3"></i>
 										</span>
 										<span class="menu-title">Authentication</span>
 										<span class="menu-arrow"></span>
@@ -683,768 +278,14 @@ License: For each use you must have a valid license purchased only from above li
 												<span class="menu-title">Multi-steps Sign-up</span>
 											</a>
 										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/extended/free-trial-sign-up.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Free Trial Sign-up</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/extended/coming-soon.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Coming Soon</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/welcome.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Welcome Message</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/verify-email.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Verify Email</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/password-confirmation.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Password Confirmation</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/deactivation.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Account Deactivation</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/error-404.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Error 404</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/authentication/general/error-500.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Error 500</span>
-											</a>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Email Templates</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/authentication/email/verify-email.html" target="blank">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Verify Email</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/authentication/email/invitation.html" target="blank">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Account Invitation</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/authentication/email/password-reset.html" target="blank">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Password Reset</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/authentication/email/password-change.html" target="blank">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Password Changed</span>
-													</a>
-												</div>
-											</div>
-										</div>
 									</div>
 								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-shield-check fs-3"></i>
-										</span>
-										<span class="menu-title">Modals</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">General</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/general/invite-friends.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Invite Friends</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/general/view-users.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">View Users</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/general/select-users.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Select Users</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/general/upgrade-plan.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Upgrade Plan</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/general/share-earn.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Share &amp; Earn</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Forms</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/forms/new-target.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">New Target</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/forms/new-card.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">New Card</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/forms/new-address.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">New Address</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/forms/create-api-key.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create API Key</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Wizards</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/wizards/two-factor-authentication.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Two Factor Auth</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/wizards/create-app.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create App</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/wizards/create-account.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create Account</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/wizards/create-project.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Create Project</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/wizards/offer-a-deal.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Offer a Deal</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Search</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/search/users.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Users</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/modals/search/select-location.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Select Location</span>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-layers fs-3"></i>
-										</span>
-										<span class="menu-title">Widgets</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/lists.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Lists</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/statistics.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Statistics</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/charts.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Charts</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/mixed.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Mixed</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/tables.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Tables</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/widgets/feeds.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Feeds</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<div class="menu-content pt-8 pb-2">
-										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Apps</span>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-printer fs-3"></i>
-										</span>
-										<span class="menu-title">Customers</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/customers/getting-started.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Getting Started</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/customers/list.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Customer Listing</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/customers/view.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Customer Details</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-cart fs-3"></i>
-										</span>
-										<span class="menu-title">Subscriptions</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/subscriptions/getting-started.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Getting Started</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/subscriptions/list.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Subscription List</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/subscriptions/add.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Add Subscription</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/subscriptions/view.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">View Subscription</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-hr fs-3"></i>
-										</span>
-										<span class="menu-title">Invoice Manager</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">View Invoices</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion menu-active-bg">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/invoices/view/invoice-1.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Invoice 1</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/invoices/view/invoice-2.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Invoice 2</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/invoices/create.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Create Invoice</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-people fs-3"></i>
-										</span>
-										<span class="menu-title">User Management</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Users</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/user-management/users/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Users List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/user-management/users/view.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">View User</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Roles</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/user-management/roles/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Roles List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/user-management/roles/view.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">View Role</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/user-management/permissions.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Permissions</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-people fs-3"></i>
-										</span>
-										<span class="menu-title">Support Center</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/support-center/overview.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Overview</span>
-											</a>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Tickets</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/support-center/tickets/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Tickets List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/support-center/tickets/view.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">View Ticket</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
-											<span class="menu-link">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Tutorials</span>
-												<span class="menu-arrow"></span>
-											</span>
-											<div class="menu-sub menu-sub-accordion">
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/support-center/tutorials/list.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Tutorials List</span>
-													</a>
-												</div>
-												<div class="menu-item">
-													<a class="menu-link" href="../../demo13/dist/apps/support-center/tutorials/post.html">
-														<span class="menu-bullet">
-															<span class="bullet bullet-dot"></span>
-														</span>
-														<span class="menu-title">Tutorial Post</span>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/support-center/faq.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">FAQ</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/support-center/licenses.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Licenses</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/support-center/contact.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Contact Us</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link" href="../../demo13/dist/apps/calendar.html">
-										<span class="menu-icon">
-											<i class="bi bi-calendar3-event fs-3"></i>
-										</span>
-										<span class="menu-title">Calendar</span>
-									</a>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi-chat-left fs-3"></i>
-										</span>
-										<span class="menu-title">Chat</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/chat/private.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Private Chat</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/chat/group.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Group Chat</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/apps/chat/drawer.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Drawer Chat</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<div class="menu-content pt-8 pb-0">
-										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Layout</span>
-									</div>
-								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-									<span class="menu-link">
-										<span class="menu-icon">
-											<i class="bi bi-layout-sidebar fs-3"></i>
-										</span>
-										<span class="menu-title">Aside</span>
-										<span class="menu-arrow"></span>
-									</span>
-									<div class="menu-sub menu-sub-accordion menu-active-bg">
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/layouts/aside/light.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Light Skin</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/layouts/aside/font-icons.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Font Icons</span>
-											</a>
-										</div>
-										<div class="menu-item">
-											<a class="menu-link" href="../../demo13/dist/layouts/aside/minimized.html">
-												<span class="menu-bullet">
-													<span class="bullet bullet-dot"></span>
-												</span>
-												<span class="menu-title">Minimized</span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="menu-item">
-									<a class="menu-link" href="https://preview.keenthemes.com/metronic8/demo13/layout-builder.html" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-										<span class="menu-icon">
-											<i class="bi bi-layers fs-3"></i>
-										</span>
-										<span class="menu-title">Layout Builder</span>
-									</a>
-								</div>
+							</div>
 								<div class="menu-item">
 									<div class="menu-content">
 										<div class="separator mx-1 my-4"></div>
 									</div>
 								</div>
-								<div class="menu-item">
-									<a class="menu-link" href="../../demo13/dist/documentation/getting-started/changelog.html">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z" fill="black" />
-													<path opacity="0.3" d="M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z" fill="black" />
-												</svg>
-											</span>
-											<!--end::Svg Icon-->
-										</span>
-										<span class="menu-title">Changelog v8.0.25</span>
-									</a>
-								</div>
-							</div>
 							<!--end::Menu-->
 						</div>
 					</div>
@@ -1482,7 +323,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 								<a href="../../demo13/dist/index.html" class="d-lg-none">
-									<img alt="Logo" src="assets/media/logos/logo-demo13-compact.svg" class="h-25px" />
+									<img alt="Logo" src={{ asset ("assets/media/logos/logo-demo13-compact.svg") }} class="h-25px" />
 								</a>
 							</div>
 							<!--end::Mobile logo-->
@@ -3148,7 +1989,7 @@ License: For each use you must have a valid license purchased only from above li
 																<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
-																		<img src="assets/media/avatars/150-1.jpg" alt="" />
+																		<img src={{ asset ("assets/media/avatars/150-1.jpg") }} alt="" />
 																	</div>
 																	<!--end::Symbol-->
 																	<!--begin::Title-->
@@ -3163,7 +2004,7 @@ License: For each use you must have a valid license purchased only from above li
 																<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
-																		<img src="assets/media/avatars/150-3.jpg" alt="" />
+																		<img src={{ asset ("assets/media/avatars/150-3.jpg") }} alt="" />
 																	</div>
 																	<!--end::Symbol-->
 																	<!--begin::Title-->
@@ -3178,7 +2019,7 @@ License: For each use you must have a valid license purchased only from above li
 																<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
-																		<img src="assets/media/avatars/150-8.jpg" alt="" />
+																		<img src={{ asset ("assets/media/avatars/150-8.jpg") }} alt="" />
 																	</div>
 																	<!--end::Symbol-->
 																	<!--begin::Title-->
@@ -3193,7 +2034,7 @@ License: For each use you must have a valid license purchased only from above li
 																<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
-																		<img src="assets/media/avatars/150-11.jpg" alt="" />
+																		<img src={{ asset ("assets/media/avatars/150-11.jpg") }} alt="" />
 																	</div>
 																	<!--end::Symbol-->
 																	<!--begin::Title-->
@@ -3208,7 +2049,7 @@ License: For each use you must have a valid license purchased only from above li
 																<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
-																		<img src="assets/media/avatars/150-12.jpg" alt="" />
+																		<img src={{ asset ("assets/media/avatars/150-12.jpg") }} alt="" />
 																	</div>
 																	<!--end::Symbol-->
 																	<!--begin::Title-->
@@ -3227,7 +2068,7 @@ License: For each use you must have a valid license purchased only from above li
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
 																		<span class="symbol-label bg-light">
-																			<img class="w-20px h-20px" src="assets/media/svg/brand-logos/volicity-9.svg" alt="" />
+																			<img class="w-20px h-20px" src={{ asset ("assets/media/svg/brand-logos/volicity-9.svg") }} alt="" />
 																		</span>
 																	</div>
 																	<!--end::Symbol-->
@@ -3244,7 +2085,7 @@ License: For each use you must have a valid license purchased only from above li
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
 																		<span class="symbol-label bg-light">
-																			<img class="w-20px h-20px" src="assets/media/svg/brand-logos/tvit.svg" alt="" />
+																			<img class="w-20px h-20px" src={{ asset ("assets/media/svg/brand-logos/tvit.svg") }} alt="" />
 																		</span>
 																	</div>
 																	<!--end::Symbol-->
@@ -3261,7 +2102,7 @@ License: For each use you must have a valid license purchased only from above li
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
 																		<span class="symbol-label bg-light">
-																			<img class="w-20px h-20px" src="assets/media/svg/misc/infography.svg" alt="" />
+																			<img class="w-20px h-20px" src={{ asset ("assets/media/svg/misc/infography.svg") }} alt="" />
 																		</span>
 																	</div>
 																	<!--end::Symbol-->
@@ -3278,7 +2119,7 @@ License: For each use you must have a valid license purchased only from above li
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
 																		<span class="symbol-label bg-light">
-																			<img class="w-20px h-20px" src="assets/media/svg/brand-logos/leaf.svg" alt="" />
+																			<img class="w-20px h-20px" src={{ asset ("assets/media/svg/brand-logos/leaf.svg") }} alt="" />
 																		</span>
 																	</div>
 																	<!--end::Symbol-->
@@ -3295,7 +2136,7 @@ License: For each use you must have a valid license purchased only from above li
 																	<!--begin::Symbol-->
 																	<div class="symbol symbol-40px me-4">
 																		<span class="symbol-label bg-light">
-																			<img class="w-20px h-20px" src="assets/media/svg/brand-logos/tower.svg" alt="" />
+																			<img class="w-20px h-20px" src={{ asset ("assets/media/svg/brand-logos/tower.svg") }} alt="" />
 																		</span>
 																	</div>
 																	<!--end::Symbol-->
@@ -4201,7 +3042,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--end::Section-->
 															<!--begin::Illustration-->
 															<div class="text-center px-4">
-																<img class="mw-100 mh-200px" alt="image" src="assets/media/illustrations/unitedpalms-1/1.png" />
+																<img class="mw-100 mh-200px" alt="image" src={{ asset ("assets/media/illustrations/unitedpalms-1/1.png") }} />
 															</div>
 															<!--end::Illustration-->
 														</div>
@@ -4444,7 +3285,7 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="d-flex align-items-stretch" id="kt_header_user_menu_toggle">
 											<!--begin::Menu wrapper-->
 											<div class="topbar-item cursor-pointer symbol px-3 px-lg-5 me-n3 me-lg-n5 symbol-30px symbol-md-35px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
-												<img src="assets/media/avatars/150-2.jpg" alt="metronic" />
+												<img src={{ asset ("assets/media/avatars/150-2.jpg") }} alt="metronic" />
 											</div>
 											<!--begin::Menu-->
 											<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
@@ -4453,7 +3294,7 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="menu-content d-flex align-items-center px-3">
 														<!--begin::Avatar-->
 														<div class="symbol symbol-50px me-5">
-															<img alt="Logo" src="assets/media/avatars/150-26.jpg" />
+															<img alt="Logo" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 														</div>
 														<!--end::Avatar-->
 														<!--begin::Username-->
@@ -4543,7 +3384,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="menu-link px-5">
 														<span class="menu-title position-relative">Language
 														<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-														<img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="" /></span></span>
+														<img class="w-15px h-15px rounded-1 ms-2" src={{ asset ("assets/media/flags/united-states.svg") }} alt="" /></span></span>
 													</a>
 													<!--begin::Menu sub-->
 													<div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -4551,7 +3392,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="menu-item px-3">
 															<a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5 active">
 															<span class="symbol symbol-20px me-4">
-																<img class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
+																<img class="rounded-1" src={{ asset ("assets/media/flags/united-states.svg") }} alt="" />
 															</span>English</a>
 														</div>
 														<!--end::Menu item-->
@@ -4559,7 +3400,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="menu-item px-3">
 															<a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5">
 															<span class="symbol symbol-20px me-4">
-																<img class="rounded-1" src="assets/media/flags/spain.svg" alt="" />
+																<img class="rounded-1" src={{ asset ("assets/media/flags/spain.svg") }} alt="" />
 															</span>Spanish</a>
 														</div>
 														<!--end::Menu item-->
@@ -4567,7 +3408,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="menu-item px-3">
 															<a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5">
 															<span class="symbol symbol-20px me-4">
-																<img class="rounded-1" src="assets/media/flags/germany.svg" alt="" />
+																<img class="rounded-1" src={{ asset ("assets/media/flags/germany.svg") }} alt="" />
 															</span>German</a>
 														</div>
 														<!--end::Menu item-->
@@ -4575,7 +3416,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="menu-item px-3">
 															<a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5">
 															<span class="symbol symbol-20px me-4">
-																<img class="rounded-1" src="assets/media/flags/japan.svg" alt="" />
+																<img class="rounded-1" src={{ asset ("assets/media/flags/japan.svg") }} alt="" />
 															</span>Japanese</a>
 														</div>
 														<!--end::Menu item-->
@@ -4583,7 +3424,7 @@ License: For each use you must have a valid license purchased only from above li
 														<div class="menu-item px-3">
 															<a href="../../demo13/dist/account/settings.html" class="menu-link d-flex px-5">
 															<span class="symbol symbol-20px me-4">
-																<img class="rounded-1" src="assets/media/flags/france.svg" alt="" />
+																<img class="rounded-1" src={{ asset ("assets/media/flags/france.svg") }} alt="" />
 															</span>French</a>
 														</div>
 														<!--end::Menu item-->
@@ -5515,7 +4356,7 @@ License: For each use you must have a valid license purchased only from above li
 																<td>
 																	<div class="d-flex align-items-center">
 																		<div class="symbol symbol-45px me-5">
-																			<img src="assets/media/avatars/150-11.jpg" alt="" />
+																			<img src={{ asset ("assets/media/avatars/150-11.jpg") }} alt="" />
 																		</div>
 																		<div class="d-flex justify-content-start flex-column">
 																			<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">Ana Simmons</a>
@@ -5582,7 +4423,7 @@ License: For each use you must have a valid license purchased only from above li
 																<td>
 																	<div class="d-flex align-items-center">
 																		<div class="symbol symbol-45px me-5">
-																			<img src="assets/media/avatars/150-3.jpg" alt="" />
+																			<img src={{ asset ("assets/media/avatars/150-3.jpg") }} alt="" />
 																		</div>
 																		<div class="d-flex justify-content-start flex-column">
 																			<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">Jessie Clarcson</a>
@@ -5649,7 +4490,7 @@ License: For each use you must have a valid license purchased only from above li
 																<td>
 																	<div class="d-flex align-items-center">
 																		<div class="symbol symbol-45px me-5">
-																			<img src="assets/media/avatars/150-4.jpg" alt="" />
+																			<img src={{ asset ("assets/media/avatars/150-4.jpg") }} alt="" />
 																		</div>
 																		<div class="d-flex justify-content-start flex-column">
 																			<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">Lebron Wayde</a>
@@ -5716,7 +4557,7 @@ License: For each use you must have a valid license purchased only from above li
 																<td>
 																	<div class="d-flex align-items-center">
 																		<div class="symbol symbol-45px me-5">
-																			<img src="assets/media/avatars/150-5.jpg" alt="" />
+																			<img src={{ asset ("assets/media/avatars/150-5.jpg") }} alt="" />
 																		</div>
 																		<div class="d-flex justify-content-start flex-column">
 																			<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">Natali Goodwin</a>
@@ -5783,7 +4624,7 @@ License: For each use you must have a valid license purchased only from above li
 																<td>
 																	<div class="d-flex align-items-center">
 																		<div class="symbol symbol-45px me-5">
-																			<img src="assets/media/avatars/150-6.jpg" alt="" />
+																			<img src={{ asset ("assets/media/avatars/150-6.jpg") }} alt="" />
 																		</div>
 																		<div class="d-flex justify-content-start flex-column">
 																			<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">Kevin Leonard</a>
@@ -5956,7 +4797,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="d-flex align-items-center mb-7">
 													<!--begin::Avatar-->
 													<div class="symbol symbol-50px me-5">
-														<img src="assets/media/avatars/150-1.jpg" class="" alt="" />
+														<img src={{ asset ("assets/media/avatars/150-1.jpg") }} class="" alt="" />
 													</div>
 													<!--end::Avatar-->
 													<!--begin::Text-->
@@ -5971,7 +4812,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="d-flex align-items-center mb-7">
 													<!--begin::Avatar-->
 													<div class="symbol symbol-50px me-5">
-														<img src="assets/media/avatars/150-4.jpg" class="" alt="" />
+														<img src={{ asset ("assets/media/avatars/150-4.jpg") }} class="" alt="" />
 													</div>
 													<!--end::Avatar-->
 													<!--begin::Text-->
@@ -5986,7 +4827,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="d-flex align-items-center mb-7">
 													<!--begin::Avatar-->
 													<div class="symbol symbol-50px me-5">
-														<img src="assets/media/avatars/150-12.jpg" class="" alt="" />
+														<img src={{ asset ("assets/media/avatars/150-12.jpg") }} class="" alt="" />
 													</div>
 													<!--end::Avatar-->
 													<!--begin::Text-->
@@ -6001,7 +4842,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="d-flex align-items-center mb-7">
 													<!--begin::Avatar-->
 													<div class="symbol symbol-50px me-5">
-														<img src="assets/media/avatars/150-8.jpg" class="" alt="" />
+														<img src={{ asset ("assets/media/avatars/150-8.jpg") }} class="" alt="" />
 													</div>
 													<!--end::Avatar-->
 													<!--begin::Text-->
@@ -6016,7 +4857,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="d-flex align-items-center">
 													<!--begin::Avatar-->
 													<div class="symbol symbol-50px me-5">
-														<img src="assets/media/avatars/150-6.jpg" class="" alt="" />
+														<img src={{ asset ("assets/media/avatars/150-6.jpg") }} class="" alt="" />
 													</div>
 													<!--end::Avatar-->
 													<!--begin::Text-->
@@ -6357,7 +5198,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Symbol-->
 													<div class="symbol symbol-50px me-5">
 														<span class="symbol-label">
-															<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
+															<img src={{ asset ("assets/media/svg/brand-logos/plurk.svg") }} class="h-50 align-self-center" alt="" />
 														</span>
 													</div>
 													<!--end::Symbol-->
@@ -6377,7 +5218,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Symbol-->
 													<div class="symbol symbol-50px me-5">
 														<span class="symbol-label">
-															<img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
+															<img src={{ asset ("assets/media/svg/brand-logos/telegram.svg") }} class="h-50 align-self-center" alt="" />
 														</span>
 													</div>
 													<!--end::Symbol-->
@@ -6397,7 +5238,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Symbol-->
 													<div class="symbol symbol-50px me-5">
 														<span class="symbol-label">
-															<img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="" />
+															<img src={{ asset ("assets/media/svg/brand-logos/vimeo.svg") }} class="h-50 align-self-center" alt="" />
 														</span>
 													</div>
 													<!--end::Symbol-->
@@ -6417,7 +5258,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Symbol-->
 													<div class="symbol symbol-50px me-5">
 														<span class="symbol-label">
-															<img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
+															<img src={{ asset ("assets/media/svg/brand-logos/bebo.svg") }} class="h-50 align-self-center" alt="" />
 														</span>
 													</div>
 													<!--end::Symbol-->
@@ -6437,7 +5278,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Symbol-->
 													<div class="symbol symbol-50px me-5">
 														<span class="symbol-label">
-															<img src="assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="" />
+															<img src={{ asset ("assets/media/svg/brand-logos/kickstarter.svg") }} class="h-50 align-self-center" alt="" />
 														</span>
 													</div>
 													<!--end::Symbol-->
@@ -6582,7 +5423,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin::Symbol-->
 															<div class="symbol symbol-50px me-3">
 																<div class="symbol-label bg-light">
-																	<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50" alt="" />
+																	<img src={{ asset ("assets/media/svg/brand-logos/plurk.svg") }} class="h-50" alt="" />
 																</div>
 															</div>
 															<!--end::Symbol-->
@@ -6606,7 +5447,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin::Symbol-->
 															<div class="symbol symbol-50px me-3">
 																<div class="symbol-label bg-light">
-																	<img src="assets/media/svg/brand-logos/figma-1.svg" class="h-50" alt="" />
+																	<img src={{ asset ("assets/media/svg/brand-logos/figma-1.svg") }} class="h-50" alt="" />
 																</div>
 															</div>
 															<!--end::Symbol-->
@@ -6630,7 +5471,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin::Symbol-->
 															<div class="symbol symbol-50px me-3">
 																<div class="symbol-label bg-light">
-																	<img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50" alt="" />
+																	<img src={{ asset ("assets/media/svg/brand-logos/vimeo.svg") }} class="h-50" alt="" />
 																</div>
 															</div>
 															<!--end::Symbol-->
@@ -6706,7 +5547,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/plurk.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6735,7 +5576,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/telegram.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6764,7 +5605,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/vimeo.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6793,7 +5634,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/bebo.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6822,7 +5663,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/kickstarter.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6877,7 +5718,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/plurk.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6906,7 +5747,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/telegram.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6935,7 +5776,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/bebo.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -6990,7 +5831,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/kickstarter.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -7019,7 +5860,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/bebo.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -7048,7 +5889,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/vimeo.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -7077,7 +5918,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<td>
 																			<div class="symbol symbol-45px me-2">
 																				<span class="symbol-label">
-																					<img src="assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
+																					<img src={{ asset ("assets/media/svg/brand-logos/telegram.svg") }} class="h-50 align-self-center" alt="" />
 																				</span>
 																			</div>
 																		</td>
@@ -7520,7 +6361,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="assets/media/avatars/150-11.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-11.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7543,12 +6384,12 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="assets/media/avatars/150-3.jpg" alt="img" />
+													<img src={{ asset ("assets/media/avatars/150-3.jpg") }} alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="assets/media/avatars/150-11.jpg" alt="img" />
+													<img src={{ asset ("assets/media/avatars/150-11.jpg") }} alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -7582,7 +6423,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="assets/media/avatars/150-5.jpg" alt="img" />
+													<img src={{ asset ("assets/media/avatars/150-5.jpg") }} alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -7641,7 +6482,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-												<img src="assets/media/avatars/150-2.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-2.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7685,7 +6526,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
-												<img src="assets/media/avatars/150-6.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-6.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7698,7 +6539,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="" class="w-30px me-3" src="assets/media/svg/files/pdf.svg" />
+												<img alt="" class="w-30px me-3" src={{ asset ("assets/media/svg/files/pdf.svg") }} />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-bold">
@@ -7715,7 +6556,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="" class="w-30px me-3" src="assets/media/svg/files/doc.svg" />
+												<img alt="" class="w-30px me-3" src={{ asset ("assets/media/svg/files/doc.svg") }} />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-bold">
@@ -7732,7 +6573,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center">
 												<!--begin::Icon-->
-												<img alt="" class="w-30px me-3" src="assets/media/svg/files/css.svg" />
+												<img alt="" class="w-30px me-3" src={{ asset ("assets/media/svg/files/css.svg") }} />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-bold">
@@ -7788,7 +6629,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="assets/media/avatars/150-11.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-11.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7832,7 +6673,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-												<img src="assets/media/avatars/150-3.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-3.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -7846,7 +6687,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay me-10">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-200px" src="assets/media/demos/demo1.png" />
+													<img alt="img" class="rounded w-200px" src={{ asset ("assets/media/demos/demo1.png") }} />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -7860,7 +6701,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay me-10">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-200px" src="assets/media/demos/demo2.png" />
+													<img alt="img" class="rounded w-200px" src={{ asset ("assets/media/demos/demo2.png") }} />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -7874,7 +6715,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-200px" src="assets/media/demos/demo3.png" />
+													<img alt="img" class="rounded w-200px" src={{ asset ("assets/media/demos/demo3.png") }} />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -7971,7 +6812,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
-												<img src="assets/media/avatars/150-14.jpg" alt="img" />
+												<img src={{ asset ("assets/media/avatars/150-14.jpg") }} alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -8189,7 +7030,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -8221,7 +7062,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-26.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -8241,7 +7082,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -8273,7 +7114,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-26.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -8293,7 +7134,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -8326,7 +7167,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-26.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -8346,7 +7187,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -8378,7 +7219,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-26.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -8398,7 +7239,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+										<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -8550,7 +7391,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo1.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo1.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo1" class="btn btn-sm btn-success shadow">Demo 1</a>
@@ -8564,7 +7405,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo2.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo2.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo2" class="btn btn-sm btn-success shadow">Demo 2</a>
@@ -8578,7 +7419,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo3.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo3.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo3" class="btn btn-sm btn-success shadow">Demo 3</a>
@@ -8592,7 +7433,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo4.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo4.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo4" class="btn btn-sm btn-success shadow">Demo 4</a>
@@ -8606,7 +7447,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo5.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo5.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo5" class="btn btn-sm btn-success shadow">Demo 5</a>
@@ -8620,7 +7461,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo6.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo6.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo6" class="btn btn-sm btn-success shadow">Demo 6</a>
@@ -8634,7 +7475,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo7.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo7.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo7" class="btn btn-sm btn-success shadow">Demo 7</a>
@@ -8648,7 +7489,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo8.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo8.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo8" class="btn btn-sm btn-success shadow">Demo 8</a>
@@ -8662,7 +7503,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo9.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo9.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo9" class="btn btn-sm btn-success shadow">Demo 9</a>
@@ -8676,7 +7517,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo10.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo10.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8690,7 +7531,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo11.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo11.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo11" class="btn btn-sm btn-success shadow">Demo 11</a>
@@ -8704,7 +7545,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo12.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo12.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8718,7 +7559,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-success rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo13.png" alt="demo" class="w-100" />
+												<img src={{ asset ("assets/media/demos/demo13.png") }} alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo13" class="btn btn-sm btn-success shadow">Demo 13</a>
@@ -8732,7 +7573,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo14.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo14.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8746,7 +7587,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo15.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo15.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8760,7 +7601,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo16.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo16.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8774,7 +7615,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo17.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo17.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8788,7 +7629,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo18.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo18.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8802,7 +7643,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo19.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo19.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8816,7 +7657,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="assets/media/demos/demo20.png" alt="demo" class="w-100 opacity-25" />
+												<img src={{ asset ("assets/media/demos/demo20.png") }} alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
@@ -8878,7 +7719,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end::Heading-->
 						<!--begin::Google Contacts Invite-->
 						<div class="btn btn-light-primary fw-bolder w-100 mb-8">
-						<img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="h-20px me-3" />Invite Gmail Contacts</div>
+						<img alt="Logo" src={{ asset ("assets/media/svg/brand-logos/google-icon.svg") }} class="h-20px me-3" />Invite Gmail Contacts</div>
 						<!--end::Google Contacts Invite-->
 						<!--begin::Separator-->
 						<div class="separator d-flex flex-center mb-8">
@@ -8901,7 +7742,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-1.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-1.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8957,7 +7798,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-26.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-26.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8985,7 +7826,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-4.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-4.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9013,7 +7854,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-15.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-15.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9069,7 +7910,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-8.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-8.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9153,7 +7994,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-6.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-6.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9209,7 +8050,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-7.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-7.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9265,7 +8106,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-17.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-17.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9321,7 +8162,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-10.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-10.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9349,7 +8190,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="assets/media/avatars/150-6.jpg" />
+											<img alt="Pic" src={{ asset ("assets/media/avatars/150-6.jpg") }} />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9921,9 +8762,9 @@ License: For each use you must have a valid license purchased only from above li
 													<!--end::Input-->
 													<!--begin::Card logos-->
 													<div class="position-absolute translate-middle-y top-50 end-0 me-5">
-														<img src="assets/media/svg/card-logos/visa.svg" alt="" class="h-25px" />
-														<img src="assets/media/svg/card-logos/mastercard.svg" alt="" class="h-25px" />
-														<img src="assets/media/svg/card-logos/american-express.svg" alt="" class="h-25px" />
+														<img src={{ asset ("assets/media/svg/card-logos/visa.svg") }} alt="" class="h-25px" />
+														<img src={{ asset ("assets/media/svg/card-logos/mastercard.svg") }} alt="" class="h-25px" />
+														<img src={{ asset ("assets/media/svg/card-logos/american-express.svg") }} alt="" class="h-25px" />
 													</div>
 													<!--end::Card logos-->
 												</div>
@@ -10041,7 +8882,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Description-->
 											<!--begin::Illustration-->
 											<div class="text-center px-4 py-15">
-												<img src="assets/media/illustrations/unitedpalms-1/9.png" alt="" class="w-100 mh-300px" />
+												<img src={{ asset ("assets/media/illustrations/unitedpalms-1/9.png") }} alt="" class="w-100 mh-300px" />
 											</div>
 											<!--end::Illustration-->
 										</div>
@@ -10623,17 +9464,17 @@ License: For each use you must have a valid license purchased only from above li
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Javascript-->
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
+		<script src={{ asset ("assets/plugins/global/plugins.bundle.js") }}></script>
+		<script src={{ asset ("assets/js/scripts.bundle.js") }}></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Page Vendors Javascript(used by this page)-->
-		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src={{ asset ("assets/plugins/custom/fullcalendar/fullcalendar.bundle.js") }}></script>
 		<!--end::Page Vendors Javascript-->
 		<!--begin::Page Custom Javascript(used by this page)-->
-		<script src="assets/js/custom/widgets.js"></script>
-		<script src="assets/js/custom/apps/chat/chat.js"></script>
-		<script src="assets/js/custom/modals/create-app.js"></script>
-		<script src="assets/js/custom/modals/upgrade-plan.js"></script>
+		<script src={{ asset ("assets/js/custom/widgets.js") }}></script>
+		<script src={{ asset ("assets/js/custom/apps/chat/chat.js") }}></script>
+		<script src={{ asset ("assets/js/custom/modals/create-app.js") }}></script>
+		<script src={{ asset ("assets/js/custom/modals/upgrade-plan.js") }}></script>
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
