@@ -14,8 +14,7 @@ License: For each use you must have a valid license purchased only from above li
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
-@yield('title')
-		<title>Atlanta Souls</title>
+		<title>@yield('title', 'Atlanta Souls®')</title>
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,6 +35,7 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
 		<link href={{ asset ("assets/plugins/global/plugins.bundle.css") }} rel="stylesheet" type="text/css" />
 		<link href={{ asset ("assets/css/style.bundle.css") }} rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="{{ asset('Assets/css/custom.css') }}">
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
@@ -51,12 +51,15 @@ License: For each use you must have a valid license purchased only from above li
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto" id="kt_aside_logo" style="background-color: #10091f">
 						<!--begin::Logo-->
-@yield('textlogo')
+						<a href="../../demo13/dist/index.html">
+							<img alt="Logo" src={{ asset ("atlanta/atlantatexto.png") }} class="h-25px logo-default" />
+							<img alt="Logo" src={{ asset ("atlanta/atl.ico") }} class="h-50px logo-minimize" />
+						</a>
 						<a href="../../demo13/dist/index.html">
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside toggler-->
-						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle active" data-kt-toggle="false" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+						<div id="kt_aside_toggle" class="arrow-top btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle active" data-kt-toggle="false" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
 							<!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
 							<span class="svg-icon svg-icon-1 rotate-180">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

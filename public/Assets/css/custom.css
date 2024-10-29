@@ -1,0 +1,19 @@
+.logo-minimize {
+    display: none;
+}
+
+[data-kt-aside-minimize=on] .arrow-top {
+    display: none;
+}
+
+.aside:hover .arrow-top {
+    display: flex !important;
+}
+
+[data-kt-aside-minimize=on] .arrow-top {
+    display: none;
+}
+
+.aside:hover .arrow-top {
+    display: flex !important;
+}
