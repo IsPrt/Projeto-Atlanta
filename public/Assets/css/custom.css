@@ -17,3 +17,7 @@
 .aside:hover .arrow-top {
     display: flex !important;
 }
+
+    .header-tablet-and-mobile-fixed.toolbar-tablet-and-mobile-fixed .wrapper {
+        padding-top: calc(0px + var(--kt-toolbar-height-tablet-and-mobile)) !important; 
+    }

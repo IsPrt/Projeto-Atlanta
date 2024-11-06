@@ -3,6 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TesteCrudController;
+use App\Http\Controllers\TestesController;
+use App\Http\Controllers\UserController;
+use App\Models\TesteCrud;
 
 /*
 |----------------------------------------------------------------------
@@ -15,11 +19,26 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-Route::get('/', function () {
-    return view('Atlanta_index');
+
+
+
+
+
+
+
+Route::prefix('/')->name('profile.')->group(function () {
+    Route::get('/', [TestesController::class,'index']) ->name('index');
 });
-Route::get('/teste', function () {
-    return view('teste');
+
+
+Route::prefix('crud')->name('crud.')->group(function () {
+    Route::get('/', [TesteCrudController::class, 'index'])->name('index');
+    Route::get('/adicionar', [TesteCrudController::class, 'create'])->name('create');
+    Route::post('/adicionar', [TesteCrudController::class, 'store'])->name('store');
+    Route::get('/editar/{id}', [TesteCrudController::class, 'edit'])->name('edit');
+    Route::put('/editar/{id}', [TesteCrudController::class, 'update'])->name('update');
+    Route::get('/excluir/{id}', [TesteCrudController::class, 'destroy'])->name('destroy');
+    
 });
 
 Route::prefix('cardapio')->name('menu.')->group(function () {
@@ -41,4 +60,22 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::prefix('usuarios')->name('users.')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('index');
+    Route::get('/adicionar', [UserController::class, 'create'])->name('create');
+    Route::post('/adicionar', [UserController::class, 'store'])->name('store');
+    Route::get('/editar/{id}', [UserController::class, 'edit'])->name('edit');
+    Route::put('/editar/{id}', [UserController::class, 'update'])->name('update');
+    Route::get('/excluir/{id}', [UserController::class, 'destroy'])->name('destroy');
+});
+
+
+
+
+
+
+
 require __DIR__.'/auth.php';
+
+
