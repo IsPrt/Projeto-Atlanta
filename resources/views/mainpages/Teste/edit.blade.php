@@ -1,4 +1,4 @@
-@extends('layouts.Atlanta')
+@extends('layouts.app')
 
 @section('content')
 <div class="card shadow-sm">

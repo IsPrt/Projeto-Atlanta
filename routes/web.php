@@ -20,11 +20,9 @@ use App\Models\TesteCrud;
 */
 
 
-
-
-
-
-
+Route::get('/teste', function () {
+    return view('teste');
+});
 
 Route::prefix('/')->name('profile.')->group(function () {
     Route::get('/', [TestesController::class,'index']) ->name('index');

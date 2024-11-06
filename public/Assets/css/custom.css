@@ -1,23 +1,29 @@
-.logo-minimize {
+
+[data-app-sidebar-minimize=on] .arrow-top {
     display: none;
 }
 
-[data-kt-aside-minimize=on] .arrow-top {
-    display: none;
-}
-
-.aside:hover .arrow-top {
+.sidebar:hover .arrow-top {
     display: flex !important;
 }
 
-[data-kt-aside-minimize=on] .arrow-top {
+[data-app-sidebar-minimize=on] .arrow-top {
     display: none;
 }
 
-.aside:hover .arrow-top {
+.sidebar:hover .arrow-top {
     display: flex !important;
 }
 
     .header-tablet-and-mobile-fixed.toolbar-tablet-and-mobile-fixed .wrapper {
         padding-top: calc(0px + var(--kt-toolbar-height-tablet-and-mobile)) !important; 
     }
+
+    .app-sidebar-minimize .app-sidebar-toggle {
+        display: none; /* Oculta a seta */
+    }
+    
+    .app-sidebar-expand .app-sidebar-toggle {
+        display: block; /* Exibe a seta novamente */
+    }
+    

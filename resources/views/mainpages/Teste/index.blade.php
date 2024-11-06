@@ -1,10 +1,10 @@
-@extends('layouts.atlanta')
+@extends('layouts.app')
 {{-- carrega o tema --}}
 
 @section('title', 'Players')
 @section('content')
-<div class="row g-15 justify-content-center">
-    <div class="col-lg-7">
+<div class="row g-15">
+    <div class="col-12">
         <div class="card card-stretch card-bordered mb-5">
 
             <div class="table-responsive">
@@ -15,34 +15,36 @@
                             <th>Email</th>
                             <th>Senha</th>
                             <th>ID</th>
-                            <th class="text-end" style="padding-right: 50px;">Ações  </th>
+                            <th width="100" class="text-center pe-6">Ações  </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="align-middle fs-5">
                         
                                 @if($contents->count())
                                     @foreach ($contents as $abc)
                                     <tr>
                                         <td>
-                                        <p class="text-start" style="padding-left: 20px;">{{ $abc->name }}</p> {{-- Exemplo de exibição do campo nome --}}
+                                        <span class="text-start" style="padding-left: 20px;">{{ $abc->name }}</span> {{-- Exemplo de exibição do campo nome --}}
                                         </td>
                                         <td>
-                                        <p>{{ $abc->email }}</p> {{-- Exemplo de exibição do campo nome --}}
+                                        <span>{{ $abc->email }}</span> {{-- Exemplo de exibição do campo nome --}}
                                         </td>
                                         <td>
-                                        <p>{{ $abc->password }}</p> {{-- Exemplo de exibição do campo nome --}}
+                                        <span>{{ $abc->password }}</span> {{-- Exemplo de exibição do campo nome --}}
                                         </td>
                                         <td>
-                                        <p>{{ $abc->id }}</p> {{-- Exemplo de exibição do campo nome --}}
+                                        <span>{{ $abc->id }}</span> {{-- Exemplo de exibição do campo nome --}}
                                         </td>
-                                        <td style="padding-left: 20px;">
-
-                                            <a href="{{ route('users.edit', $abc->id)}}" class="btn btn-icon btn-primary">
+                                        <td class="pe-6">
+                                            <div class="d-flex justify-content-end">
+                                                
+                                            <a href="{{ route('users.edit', $abc->id)}}" class="btn btn-icon btn-primary mx-1">
                                                 <i class="bi bi-pencil" style="font-size: 20px;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                                                 </a>
-                                            <a href="{{ route('users.destroy', $abc->id)}}" class="btn btn-icon btn-danger">
+                                            <a href="{{ route('users.destroy', $abc->id)}}" class="btn btn-icon btn-danger mx-1">
                                                 <i class="bi bi-person-x-fill" style="font-size: 20px;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                                                 </a>
+                                            </div>
                                         </td>
                                     </tr>
                                     

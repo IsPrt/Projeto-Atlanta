@@ -1,7 +1,7 @@
-@extends('layouts.Atlanta')
+@extends('layouts.app')
 
 @section('content')
-<div class="card shadow-sm">
+<div class="card card-bordered "
     <div class="card-header">
         <h3 class="card-title">Novo Usuario</h3>
         <div class="card-toolbar">
