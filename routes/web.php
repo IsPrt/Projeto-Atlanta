@@ -6,6 +6,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TesteCrudController;
 use App\Http\Controllers\TestesController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserPhoneController;
 use App\Models\TesteCrud;
 
 /*
@@ -66,12 +67,23 @@ Route::prefix('usuarios')->name('users.')->group(function () {
     Route::get('/editar/{id}', [UserController::class, 'edit'])->name('edit');
     Route::put('/editar/{id}', [UserController::class, 'update'])->name('update');
     Route::get('/excluir/{id}', [UserController::class, 'destroy'])->name('destroy');
+    Route::get('/infos/{id}', [UserController::class, 'show'])->name('show');
+
 });
 
+Route::prefix('usuarios-telefones')->name('userphone.')->group(function () {
+    Route::post('/adicionar/{id}', [UserPhoneController::class, 'store'])->name('store');
+    Route::get('/editar/{id}', [UserPhoneController::class, 'edit'])->name('edit');
+    Route::put('/editar/{id}', [UserPhoneController::class, 'update'])->name('update');
+    Route::get('/excluir/{id}', [UserPhoneController::class, 'destroy'])->name('destroy');
+    Route::get('/infos/{id}', [UserPhoneController::class, 'show'])->name('show');
 
+});
 
+use App\Http\Controllers\FileUploadController;
 
-
+Route::get('/upload', [FileUploadController::class, 'showUploadForm'])->name('upload.form');
+Route::post('/upload', [FileUploadController::class, 'uploadFile'])->name('upload.file');
 
 
 require __DIR__.'/auth.php';

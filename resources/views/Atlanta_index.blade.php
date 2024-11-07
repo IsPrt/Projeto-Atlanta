@@ -1,4 +1,4 @@
-@extends('layouts.atlanta')
+@extends('layouts.app')
 {{-- carrega o tema --}}
 
 @section('title', 'Usuários')

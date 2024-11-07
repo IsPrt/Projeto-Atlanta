@@ -1,7 +1,7 @@
 @extends('layouts.app')
 {{-- carrega o tema --}}
 
-@section('title', 'Players')
+@section('title', 'Tabela de Usuarios')
 @section('content')
 <div class="row g-15">
     <div class="col-12">
@@ -27,10 +27,10 @@
                                         <span class="text-start" style="padding-left: 20px;">{{ $abc->name }}</span> {{-- Exemplo de exibição do campo nome --}}
                                         </td>
                                         <td>
-                                        <span>{{ $abc->email }}</span> {{-- Exemplo de exibição do campo nome --}}
+                                            <i class="bi bi-eye-slash" style="font-size: 20px;"></i>
                                         </td>
                                         <td>
-                                        <span>{{ $abc->password }}</span> {{-- Exemplo de exibição do campo nome --}}
+                                            <i class="bi bi-eye-slash" style="font-size: 20px;"></i>
                                         </td>
                                         <td>
                                         <span>{{ $abc->id }}</span> {{-- Exemplo de exibição do campo nome --}}
@@ -41,9 +41,13 @@
                                             <a href="{{ route('users.edit', $abc->id)}}" class="btn btn-icon btn-primary mx-1">
                                                 <i class="bi bi-pencil" style="font-size: 20px;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                                                 </a>
+                                            <a href="{{ route('users.show', $abc->id)}}" class="btn btn-icon btn-primary mx-1">
+                                                <i class="bi bi-info-lg" style="font-size: 20px;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                                                </a>
                                             <a href="{{ route('users.destroy', $abc->id)}}" class="btn btn-icon btn-danger mx-1">
                                                 <i class="bi bi-person-x-fill" style="font-size: 20px;"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                                                 </a>
+                                            
                                             </div>
                                         </td>
                                     </tr>

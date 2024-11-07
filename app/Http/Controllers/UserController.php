@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\UserPhone;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -75,9 +76,20 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
+    public function show($id)
+    {
+        // Busca o post pelo ID e carrega as tags relacionadas
+        $menu = User::findOrFail($id);
+
+        // Retorna a view 'post.show' com o post e as tags associadas
+        return view('mainpages.teste.infos')->with('menu', $menu);
+    }
+
     public function destroy($id)
     {
-        User::destroy($id); // Exclui o registro com o ID fornecido
+        $user = User::find($id);
+        $user->phones()->delete();
+        $user->delete();
         return redirect()->route('users.index')->with('success', 'Registro excluído com sucesso!');
     }   
 }
