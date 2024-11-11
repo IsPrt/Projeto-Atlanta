@@ -22,7 +22,7 @@ use App\Models\TesteCrud;
 
 
 Route::get('/teste', function () {
-    return view('teste');
+    return view('testpage.index');
 });
 
 Route::prefix('/')->name('profile.')->group(function () {
@@ -68,6 +68,7 @@ Route::prefix('usuarios')->name('users.')->group(function () {
     Route::put('/editar/{id}', [UserController::class, 'update'])->name('update');
     Route::get('/excluir/{id}', [UserController::class, 'destroy'])->name('destroy');
     Route::get('/infos/{id}', [UserController::class, 'show'])->name('show');
+    Route::get('/lista', [UserController::class, 'list'])->name('list');
 
 });
 

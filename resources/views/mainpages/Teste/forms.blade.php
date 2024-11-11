@@ -20,4 +20,5 @@
     <p class='text-danger'> {{ session('message') }}</p>
     @endif
     <input class="form-control form-control-lg form-control-solid" type="password" placeholder="123456789" name="confirm_password" autocomplete="off" required>    
+    
 </div>

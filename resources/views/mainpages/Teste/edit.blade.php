@@ -1,5 +1,3 @@
-@extends('layouts.app')
-@section('content')
 <div class="card shadow-sm mb-4">
     <div class="card-header">
         <h3 class="card-title">Editar Usuario</h3>
@@ -7,7 +5,7 @@
         </div>
     </div>
     <div class="card-body">
-        <form action="{{ route('users.update', $menu->id) }}" method="POST">
+        <form action="{{ route('users.update', $menu->id) }}" method="POST" id="form-edit-user">
             @csrf       
             @method('put')
             @include('mainpages.teste.forms')
@@ -35,4 +33,3 @@
         </form>
     </div>
 </div>
-@endsection

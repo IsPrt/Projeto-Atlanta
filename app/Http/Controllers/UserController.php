@@ -31,22 +31,17 @@ class UserController extends Controller
     // armazena os dados enviados no formulario do create
     public function store(Request $request)
     {
-          // Validação
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8',
-        ]);
+        $data = $request->all();
 
         // Criação do usuário
         User::create([
-            'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'password' => bcrypt($validatedData['password']),
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
             'status' => true,
         ]);
 
-        return redirect()->route('users.index');
+        return response()->json('successful');
     }
 
     // pagina de edicao
@@ -73,7 +68,7 @@ class UserController extends Controller
         $menu = User::find($id);
         $menu->update($data);
         
-        return redirect()->route('users.index');
+        return 'success';
     }
 
     public function show($id)
@@ -92,5 +87,18 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users.index')->with('success', 'Registro excluído com sucesso!');
     }   
+
+
+    public function list()
+    {
+        // Obtenha todos os registros da tabela 'menus'
+        $menus = User::all();
+        
+        // Passe os dados para a visualização
+        return view('mainpages.teste._list')->with([
+            'contents' => $menus
+        ]);
+    }
+
 }
 
